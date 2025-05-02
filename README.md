@@ -1,4 +1,5 @@
-### Welcome to the  Analytics Engineering course. This repository contains some of the important information and codes that may come in handy in learning this course. This file contains information about git, sql and DBT. Verify all codes and customize them to your dataset
+# Analytics Engineering
+ Welcome to the  Analytics Engineering course. This repository contains some of the important information and codes that may come in handy in learning this course. This file contains information about git, sql and DBT. Verify all codes and customize them to your dataset
 
 ## git
 git is a version control system. It allows teams to collaborate on tasks thereby driving efficiency and preventing data loss due to discentralized system. git is also known as a source code management system because it allows teams to store source codes of their works in a centrall location and build security around it to prevent corruption.
@@ -25,7 +26,7 @@ $ git config --global user.email ologogoro@dataguy.com
 Next Initialize git on the directory to turn it into a git directory...why?
 The reason is such that git can then track changes to the files in the directory going forward!
 
-# Operations in Git
+### Operations in Git
 There are a few operations that would come in handy while working as an analytical Engineer. We have identified 6 of them. There are more anyways but you may have to be familiar with this few:
 1. git clone URL: Allows you to clone a repository so that you can have all the online files locally on your PC
  Example: git clone https://github.com/phoenix-analytics-bootcamp/this-is-a-sample-repo.git
