@@ -70,12 +70,12 @@ Let's get started!!!
 
 
 #### Task 1
-- create a database and name it DB1
+- create a database and name it DB1 \n
 CREATE database DB1;
 
 #### Task 2
 Create a schema called surnamer for the database DB1
-Navigate into DB1 and run:
+Navigate into DB1 and run: \n
 CREATE schema surnamer;
 
 create table omolola.phone_book (
