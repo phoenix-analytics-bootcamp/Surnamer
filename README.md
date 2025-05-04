@@ -76,7 +76,11 @@ CREATE database DB1;
 #### Task 2
 - create a schema called test on the dataabase DB1  
 Navigate into DB1 and run:  
-    CREATE schema surnamer;
+    CREATE schema test;
+
+#### Task 3:
+- create a table mytable in your test schema inside the DB1 database  
+    CREATE table schema.mytable;
 
 create table omolola.phone_book (
 id int,
