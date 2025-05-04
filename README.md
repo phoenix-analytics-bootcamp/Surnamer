@@ -88,6 +88,5 @@ DDL commands allow us to change the database structure and not the data. Some ma
 
 Now let's look at commands that change the data in a database.
 
-## Data Manipulation Language
-
-This are commands that are used 
+## Data Manipulation Language  
+DML (Data Manipulation Language): Commands like INSERT, UPDATE, and DELETE to manipulate data within the database.
