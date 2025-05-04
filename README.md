@@ -2,9 +2,9 @@
  Welcome to the  Analytics Engineering course. This repository contains some of the important information and codes that may come in handy in learning this course. This file contains information about git, sql and DBT. Verify all codes and customize them to your dataset
 
 ## git
-git is a version control system. It allows teams to collaborate on tasks thereby driving efficiency and preventing data loss due to discentralized system. git is also known as a source code management system because it allows teams to store source codes of their works in a centrall location and build security around it to prevent corruption.
+git is a version control system. It allows teams to collaborate on tasks thereby driving efficiency and preventing data loss due to decentralized system. git is also known as a source code management system because it allows teams to store source codes of their works in a central location and build security around it to prevent corruption.
 
-For example, controls can be built around updating the base code only after it has been reviewed and approved by appropriate personnel. For information about git such as the basic concept: working directory, staging an d.git directory, please check the following link: https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
+For example, controls can be built around updating the base code only after it has been reviewed and approved by appropriate personnel. For information about git such as the basic concept: Working directory, staging and .git directory, please check the following link: https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
 
 To install git: Use your preferred OS and install the corresponding software:
 linux: https://git-scm.com/download/linux. 
@@ -19,7 +19,7 @@ $ git --version. You should see an output that details the version of the git so
 
 Create a directory for your project and navigate to it. 
 Open the terminal on the directory and...
-Next: setup your identity 
+Next: set up your identity 
 $ git config --global user.name "Ahmed Elenu"
 $ git config --global user.email ologogoro@dataguy.com
 
@@ -48,11 +48,11 @@ Any file that has been modified will have its name in red
 Note: if you push for the first time especially on a newly created branch, you receive a notification to run the command:  
             git push --set-upstream origin branch_name
 
-7. git pull: As you will not be working direcly on the main branch online, you will be required to pull the most current file from github to your local directory; use git pull
+7. git pull: As you will not be working directly on the main branch online, you will be required to pull the most current file from github to your local directory; use git pull
 
 Other operations exits such as git rebase, pull request, merging etc
 
-Pull request allows you to get reviewers to validate yourwork before you merge into the main branch. NEVER MERGE CODE CHNAGES INTO MAIN BRANCH WITHOUT EXTENSIVE REVIEW BECAUSE ONCE MERGED, THERE IS NO EASY GOING BACK IF THERE IS NO BACKUP
+'Pull request' allows you to get reviewers to validate your work before you merge into the main branch. NEVER MERGE CODE CHANGES INTO MAIN BRANCH WITHOUT EXTENSIVE REVIEW BECAUSE ONCE MERGED, THERE IS NO EASY GOING BACK IF THERE IS NO BACKUP
 
 Happy Git-"ing"!!!
 
