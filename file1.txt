@@ -24,6 +24,10 @@ Task 3:
 -- comment --string
 
 CREAT table surnamer.marketing (
-id 
-
-)
+id int,
+firstname_lastname varchar(100),
+date date
+amount decimal(8,2),
+item varchar(50)
+comment varchar(225),
+);
