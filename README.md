@@ -56,6 +56,17 @@ Pull request allows you to get reviewers to validate yourwork before you merge i
 
 Happy Git-"ing"!!!
 
+## SQL
+In this section, we will be talking about SQL. Beyond meaning Structured Query Language, SQL is a backbone of Analytics Engineering. For this project, we will not go into details of installing dbeaver, the defacto database management tool that allows us to  manage different types of relational databases. This document might focus on that in future. 
+
+You can download and install the community version of dbeaver through the link: https://dbeaver.io/download/
+Once installed, connect to postgreSQL database using the credentials supplied by the instructor
+Test your connection and install any dependencies.
+Navigate to your schema an start writing your codess
+
+This documentation will include instructions for creating and working on a schema. 
+
+Let's get started!!!
 
 create table omolola.phone_book (
 id int,
