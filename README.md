@@ -68,6 +68,15 @@ This documentation will include instructions for creating and working on a schem
 
 Let's get started!!!
 
+
+#### Task 1
+create a database and name it surnamer DB1
+CREATE database DB1;
+
+#### Task 2
+# Create a schema called surnamer for the database DB1
+CREATE schema surnamer;
+
 create table omolola.phone_book (
 id int,
 friend_name varchar(60),
