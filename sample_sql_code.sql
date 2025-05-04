@@ -32,6 +32,10 @@ Going forward, the information that we will use for our table and schema will ch
 select * 
 from surnamer.orders;
 
+# How to retrieve DATA  
+Select order_id, customer_id, amount 
+From surnamer.orders;
+
 
 
 create table omolola.phone_book (

@@ -56,3 +56,38 @@ Pull request allows you to get reviewers to validate yourwork before you merge i
 
 Happy Git-"ing"!!!
 
+
+# SQL
+In this section, we will be talking about SQL. Beyond meaning Structured Query Language, SQL is a backbone of Analytics Engineering. For this project, we will not go into details of installing dbeaver, the defacto database management tool that allows us to  manage different types of relational databases. This document might focus on that in future. 
+
+You can download and install the community version of dbeaver through the link: https://dbeaver.io/download/
+Once installed, connect to postgreSQL database using the credentials supplied by the instructor
+Test your connection and install any dependencies.
+Navigate to your schema an start writing your codess
+
+This documentation will include instructions for creating and working on a schema. 
+
+Let's get started!!!
+
+## Data Definition Language
+This are operations that are used to define and manage the straucture of database objects  
+It includes operations such as CREATE, TRUNCATE, ALTER, DROP  
+
+CREATE: To add a new object to the database  
+ALTER: To change the structure of the database  
+DROP: To remove an existing object from the database. Check out our guide on how to delete a column in SQL  
+TRUNCATE: To remove all records from a table, including the space allocated to store this data  
+
+Some DDL commands are highy destructive and should be used with caution. You will most likely ot use DDL commands often in your daily work as analytics engineer. Should you worry about them? Maybe Yes!.
+
+Some database engines have specfic DDL commands relevant to them. Example is COMMENT in postgreSQL and RENAME in MYSQL
+
+summary:
+
+DDL commands allow us to change the database structure and not the data. Some may be destructive and should be used with care.
+
+Now let's look at commands that change the data in a database.
+
+## Data Manipulation Language
+
+This are commands that are used 
