@@ -70,11 +70,11 @@ Let's get started!!!
 
 
 #### Task 1
-- create a database and name it DB1
+- create a database and name it DB1  
 CREATE database DB1;
 
 #### Task 2
-Create a schema called surnamer for the database DB1  
+- create a schema called test on the dataabase DB1  
 Navigate into DB1 and run:  
     CREATE schema surnamer;
 
