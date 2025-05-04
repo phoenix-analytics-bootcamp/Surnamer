@@ -82,6 +82,10 @@ Navigate into DB1 and run:
 - create a table mytable in your test schema inside the DB1 database  
     CREATE table schema.mytable;
 
+
+Have you tried this on your own? give it a trial  
+Going forward, the information that we will use for our table and schema will change. We will no longer use schema test and table mytable. You can adpat the code to fit your schema and tables....ok?  
+
 create table omolola.phone_book (
 id int,
 friend_name varchar(60),
