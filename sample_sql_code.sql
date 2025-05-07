@@ -201,3 +201,15 @@ from
 payments_tha.merchants
 where merchant_category = 'e-commerce'
 or country = 'UK';
+
+
+-- In and NOT 
+-- IN
+select 
+merchant_id, 
+merchant_category,
+country,
+merchant_name
+from 
+payments_tha.merchants
+where country IN ('Nigeria', 'UK', 'Kenya');
