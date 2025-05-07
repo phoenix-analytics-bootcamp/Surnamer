@@ -213,3 +213,46 @@ merchant_name
 from 
 payments_tha.merchants
 where country IN ('Nigeria', 'UK', 'Kenya');
+
+
+--NOT or ! or <>
+select merchant_id,
+merchant_category,
+country,
+merchant_name
+from payments_tha.merchants
+WHERE country not IN ('Nigeria', 'UK', 'Kenya');
+
+select merchant_id,
+merchant_category,
+country,
+merchant_name
+from payments_tha.Merchant
+where country !='Nigeria';
+
+select 
+merchant_id, 
+merchant_category,
+country,
+merchant_name
+from 
+payments_tha.merchants
+where country <> 'Nigeria';
+
+-- aggregate function multiple aggregation
+select merchant_id, reason, count(chargeback_amount), min(chargeback_amount), max(chargeback_amount), sum(chargeback_amount)
+from payments_tha.chargebacks
+group by merchant_id, reason
+order by 1;
+
+--- If you have  a colum that is not defined with an aggregrate function in your select statement, you must include it in the gorup by clause
+select merchant_category, count(merchant_category)
+from payments_tha.merchants
+group by merchant_category;
+
+
+-- having clause in Group by
+select reason, count(chargeback_amount)
+from payments_tha.chargebacks
+group by reason having reason <>'fraud';
+
