@@ -1,16 +1,3 @@
-## SQL
-In this section, we will be talking about SQL. Beyond meaning Structured Query Language, SQL is a backbone of Analytics Engineering. For this project, we will not go into details of installing dbeaver, the defacto database management tool that allows us to  manage different types of relational databases. This document might focus on that in future. 
-
-You can download and install the community version of dbeaver through the link: https://dbeaver.io/download/
-Once installed, connect to postgreSQL database using the credentials supplied by the instructor
-Test your connection and install any dependencies.
-Navigate to your schema an start writing your codess
-
-This documentation will include instructions for creating and working on a schema. 
-
-Let's get started!!!
-
-
 #### Task 1
 - create a database and name it DB1  
 CREATE database DB1;
@@ -67,6 +54,11 @@ set location = 'Evry'
 where id_friend = 1
 
 
+update pelebe.pay_phonebook
+set location = 'Evry'
+where id_friend = 1
+
+
 -- Filter using `equals to` = 
 select *
 from omolola.phone_book
@@ -89,10 +81,8 @@ select *
 from omolola.phone_book
 where location = 'Nice'
 or date(date_added) = '2024-11-22'
-or 
 
-
-
+-- we now use a dataset that has the following tables customers, orders, order_items, products
 
 select * from sample_schema.customers
 where customer_id = 158;
@@ -103,7 +93,7 @@ where order_id in (4, 20, 336, 668, 677, 791);
 select * from sample_schema.products
 where product_id in (37, 132, 29, 121, 26, 56);
 
-
+-- Usin in, not in, =
 
 select * from sample_schema.products
 where name = 'Few'
@@ -122,9 +112,12 @@ select * from sample_schema.orders;
 
 select sum(amount) from sample_schema.orders;
 
+-- guess what this query does
 select customer_id, sum(amount) as sum_amount, count(order_id) count_order, min(amount) min_order,
 max(amount) as max_order
 from sample_schema.orders
 group by customer_id
 having min(amount) > 400
+
+-- Rule: whenever you have a column in your select statement that is not an aggregate function, you must put the column in your group by clause
 
