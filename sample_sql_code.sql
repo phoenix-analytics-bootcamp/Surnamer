@@ -142,3 +142,74 @@ merchant_id as "Merchant ID",
 country,
 merchant_name
 from payments_tha.merchants
+
+--using WHERE keyword to filter
+-- regular filter
+select
+merchant_id,
+merchant_category,
+country,
+merchant_name
+from  payments_tha.merchants
+where country = 'Nigeria';
+
+select 
+merchant_id, 
+merchant_category,
+country,
+merchant_name
+from 
+payments_tha.merchants
+where merchant_category = 'e-commerce';
+
+-- filter with logical operation '--AND'
+select merchant_id,
+merchant_category,
+country,
+merchant_name
+FROM payments_tha.merchants
+where merchant_category = 'e-commerce' AND country = 'UK'
+
+select 
+merchant_id, 
+merchant_category,
+country,
+merchant_name
+from 
+payments_tha.merchants
+where merchant_category = 'gaming'
+and country = 'Kenya';
+
+
+-- filter with logical operation '--OR'
+
+SELECT merchant_id,
+merchant_category,
+country,
+merchant_name
+from 
+payments_tha.merchants
+where merchant_category = 'gaming'
+or country = 'Kenya';
+
+select 
+merchant_id, 
+merchant_category,
+country,
+merchant_name
+from 
+payments_tha.merchants
+where merchant_category = 'e-commerce'
+or country = 'UK';
+
+
+-- In and NOT 
+-- IN
+select 
+merchant_id, 
+merchant_category,
+country,
+merchant_name
+from 
+payments_tha.merchants
+where country IN ('Nigeria', 'UK', 'Kenya');
