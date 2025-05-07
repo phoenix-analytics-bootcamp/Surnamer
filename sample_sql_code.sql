@@ -121,3 +121,24 @@ having min(amount) > 400
 
 -- Rule: whenever you have a column in your select statement that is not an aggregate function, you must put the column in your group by clause
 
+
+-- The following operations are performed on the dataset that contains the following tables merchants, transactions and chargebacks; schema is payments_tha
+-- view your tables to see the columns
+select * from payments_tha.merchants;
+select * from payments_tha.transactions;
+select * from payments_tha.chargebacks;
+
+--using select keyword to select based on columns name and using 
+select
+merchant_category,
+merchant_id,
+country,
+merchant_name
+from payments_tha.merchants;
+
+-- using select keyword to select based on cloumns name and alias:
+select merchant_category as "Merchant Category",
+merchant_id as "Merchant ID",
+country,
+merchant_name
+from payments_tha.merchants
