@@ -213,3 +213,122 @@ merchant_name
 from 
 payments_tha.merchants
 where country IN ('Nigeria', 'UK', 'Kenya');
+
+
+--NOT or ! or <>
+select merchant_id,
+merchant_category,
+country,
+merchant_name
+from payments_tha.merchants
+WHERE country not IN ('Nigeria', 'UK', 'Kenya');
+
+select merchant_id,
+merchant_category,
+country,
+merchant_name
+from payments_tha.Merchant
+where country !='Nigeria';
+
+select 
+merchant_id, 
+merchant_category,
+country,
+merchant_name
+from 
+payments_tha.merchants
+where country <> 'Nigeria';
+
+-- aggregate function multiple aggregation
+select merchant_id, reason, count(chargeback_amount), min(chargeback_amount), max(chargeback_amount), sum(chargeback_amount)
+from payments_tha.chargebacks
+group by merchant_id, reason
+order by 1;
+
+--- If you have  a colum that is not defined with an aggregrate function in your select statement, you must include it in the gorup by clause
+select merchant_category, count(merchant_category)
+from payments_tha.merchants
+group by merchant_category;
+
+
+-- having clause in Group by
+select reason, count(chargeback_amount)
+from payments_tha.chargebacks
+group by reason having reason <>'fraud';
+
+--extra filter ( wildcards at the back front and back) and 'like'
+select *
+from payments_tha.chargebacks
+where transaction_id like '%tnx%' -- this means we are selecting all columns from the chargebacks table in payments_tha schema where transaction_id contains the string 'tnx'. Note that it may be case sensitive and not equal to TNX
+
+-- extract filter (one wildcards at the front)  and like
+select  *
+from payments_tha.chargebacks
+where transaction_id like '%txn' -- means same as above except that transaction_id ends with tnx (example 123435tnx)
+
+select  *
+from payments_tha.chargebacks
+where transaction_id like 'txn%' --means that we select all columns where the transaction_id begins with 'tnx' for example tnx12345
+
+---JOIN
+-- Join is used to connect multiple tables and extract information from them
+-- we can have for example:
+
+select * from sample_schema.customers
+where customer_id = 2;
+select * from sample_schema.orders 
+where customer_id = 437;
+select * from sample_schema.order_items 
+where order_id = 527;
+select * from sample_schema.products 
+where product_id in (149, 131, 187, 148);
+
+--inner Join: Suppose you have 2 tables innerjoin will return columns in both tables that have matching column. Example. suppose I have table customers with columns customer_id,name, email and another table orders with columns
+-- customer_id, order_date and amount. both tables have common column (customer_id) so an innerjoin query can be written as:
+
+ -- inner join
+select customers.customer_id, 
+orders.customer_id as orders_cust_id, 
+customers.name, 
+customers.email, 
+orders.order_date, 
+orders.amount
+from sample_schema.customers customers
+inner join sample_schema.orders orders 
+on customers.customer_id = orders.customer_id;
+-- iner join returns coloumns that are common to both tables only. -- Try it!!!
+
+-- left join Will display every row on the left table (customers) plus the right table even if there are no corresponding rows in the right table
+select customers.customer_id, 
+orders.customer_id as orders_cust_id, 
+customers.name, 
+customers.email, 
+orders.order_date, 
+orders.amount
+from sample_schema.customers customers
+left join sample_schema.orders orders 
+  on customers.customer_id = orders.customer_id;
+
+
+-- right join wll display the entire table from the right table and the left table even if there is no corresponding entry in the right table. Note that there must exist a matching column (customer_id) called foreign key for us to be able to do joins
+select customers.customer_id, 
+orders.customer_id as orders_cust_id, 
+customers.name, 
+customers.email, 
+orders.order_date, 
+orders.amount
+from sample_schema.customers customers
+right join sample_schema.orders orders 
+  on customers.customer_id = orders.customer_id;
+
+-- Full outer join returns all records on both tables, matching or not (rarely used)
+select customers.customer_id, 
+orders.customer_id as orders_cust_id, 
+customers.name, 
+customers.email, 
+orders.order_date, 
+orders.amount
+from sample_schema.customers customers
+full outer join sample_schema.orders orders 
+on customers.customer_id = orders.customer_id;
+
